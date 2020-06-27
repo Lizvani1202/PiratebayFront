@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-    <a class="navbar-brand" href="#">Navbar</a>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #af9f81;">
+    <a class="navbar-brand" href="#">Piratebay</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -12,7 +12,7 @@
           <a class="nav-link" routerLink="/lista"><i class="far fa-list-alt"></i> Lista</a>
         </li>
         <li class="nav-item" *ngIf="!isLogged">
-            <a class="nav-link"  routerLink="/login"><i class="fas fa-sign-in-alt"></i> Iniciar Sesión</a>
+            <a class="nav-link"  routerLink="/login"><i class="fas fa-user-circle"></i> Iniciar Sesión</a>
           </li>
           <li class="nav-item" *ngIf="isLogged" (click)="onLogOut()">
             <a class="nav-link" style="cursor: pointer;"><i class="fas fa-door-open" ></i> Cerrar Sesión</a>
