@@ -1,1 +1,106 @@
-<p>entregas works!</p>
+<div align="center">
+  <h1 >Lista de Pedidos</h1>
+  <hr>
+  <div >
+</div>
+
+  <mat-tab-group>
+    <mat-tab label="Pagado">
+      <table id="myTable" class="table table-striped">
+        <thead>
+           <tr>
+              <th scope="col">#Orden</th>
+              <th scope="col">Numero Orden</th>
+              <th scope="col">Producto</th>
+              <th scope="col">Monto</th>
+              <th scope="col">Fecha Pagado</th>
+              <th scope="col">Fecha Preparado</th>
+           </tr>
+        </thead>
+        <tbody>
+         <tr *ngFor="let p of OrdenTabla">
+               <td>{{p.idOrden}}</td>
+               <td>{{p.numeroOrden}}</td>
+               <td>{{p.productoNombre}}</td>
+               <td>{{p.monto}}</td>
+               <td>{{p.fechaPagado | date: 'yyyy-MM-dd'}}</td>
+               <td>{{p.fechaDespachado | date: 'yyyy-MM-dd'}}</td>
+         </tr>
+        </tbody>
+     </table> </mat-tab>
+    <mat-tab label="Preparado">
+      <table id="myTable" class="table table-striped">
+        <thead>
+           <tr>
+              <th scope="col">#Orden</th>
+              <th scope="col">Numero Orden</th>
+              <th scope="col">Producto</th>
+              <th scope="col">Monto</th>
+              <th scope="col">Fecha Pagado</th>
+              <th scope="col">Fecha Preparado</th>
+           </tr>
+        </thead>
+        <tbody>
+         <tr *ngFor="let p of OrdenTabla">
+               <td>{{p.idOrden}}</td>
+               <td>{{p.numeroOrden}}</td>
+               <td>{{p.productoNombre}}</td>
+               <td>{{p.monto}}</td>
+               <td>{{p.fechaPagado | date: 'yyyy-MM-dd'}}</td>
+               <td>{{p.fechaDespachado | date: 'yyyy-MM-dd'}}</td>
+         </tr>
+        </tbody>
+     </table>
+    </mat-tab>
+    <mat-tab label="Despachado">
+      <table id="myTable" class="table table-striped">
+        <thead>
+           <tr>
+              <th scope="col">#Orden</th>
+              <th scope="col">Numero Orden</th>
+              <th scope="col">Producto</th>
+              <th scope="col">Monto</th>
+              <th scope="col">Fecha Pagado</th>
+              <th scope="col">Fecha Preparado</th>
+           </tr>
+        </thead>
+        <tbody>
+         <tr *ngFor="let p of OrdenTabla">
+               <td>{{p.idOrden}}</td>
+               <td>{{p.numeroOrden}}</td>
+               <td>{{p.productoNombre}}</td>
+               <td>{{p.monto}}</td>
+               <td>{{p.fechaPagado | date: 'yyyy-MM-dd'}}</td>
+               <td>{{p.fechaDespachado | date: 'yyyy-MM-dd'}}</td>
+         </tr>
+        </tbody>
+     </table>
+    </mat-tab>
+    <mat-tab label="Entregado">
+      <table id="myTable" class="table table-striped">
+        <thead>
+           <tr>
+              <th scope="col">#Orden</th>
+              <th scope="col">Numero Orden</th>
+              <th scope="col">Producto</th>
+              <th scope="col">Monto</th>
+              <th scope="col">Fecha Pagado</th>
+              <th scope="col">Fecha Preparado</th>
+           </tr>
+        </thead>
+        <tbody>
+         <tr *ngFor="let p of OrdenTabla">
+               <td>{{p.idOrden}}</td>
+               <td>{{p.numeroOrden}}</td>
+               <td>{{p.productoNombre}}</td>
+               <td>{{p.monto}}</td>
+               <td>{{p.fechaPagado | date: 'yyyy-MM-dd'}}</td>
+               <td>{{p.fechaDespachado | date: 'yyyy-MM-dd'}}</td>
+         </tr>
+        </tbody>
+     </table>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+
+

@@ -16,6 +16,7 @@ import { RegistroComponent } from './auth/registro.component';
 import { MenuComponent } from './menu/menu.component';
 import { IndexComponent } from './index/index.component';
 import { EntregasComponent } from './entregas/entregas.component';
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 
@@ -34,7 +35,8 @@ import { EntregasComponent } from './entregas/entregas.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatTabsModule
   ],
   providers: [interceptorProvider],
   bootstrap: [AppComponent]
