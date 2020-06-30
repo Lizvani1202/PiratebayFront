@@ -19,10 +19,12 @@ export class EntregasComponent implements OnInit {
     this.Filtrar();
   }
   Filtrar(): void{
-    for(let n=0;n<this.OrdenTabla.length;n++)
+   /* for(let n=0;n<this.OrdenTabla.length;n++)
     {
       console.log(this.OrdenTabla[n]);
-    }
+    }*/
+
+    console.log();
 
   }
 

@@ -14,17 +14,15 @@
               <th scope="col">Producto</th>
               <th scope="col">Monto</th>
               <th scope="col">Fecha Pagado</th>
-              <th scope="col">Fecha Preparado</th>
            </tr>
         </thead>
-        <tbody>
-         <tr *ngFor="let p of OrdenTabla">
+        <tbody *ngFor="let p of OrdenTabla">
+          <tr *ngIf="p.fechaPagado !=null">
                <td>{{p.idOrden}}</td>
                <td>{{p.numeroOrden}}</td>
                <td>{{p.productoNombre}}</td>
                <td>{{p.monto}}</td>
                <td>{{p.fechaPagado | date: 'yyyy-MM-dd'}}</td>
-               <td>{{p.fechaDespachado | date: 'yyyy-MM-dd'}}</td>
          </tr>
         </tbody>
      </table> </mat-tab>
@@ -36,18 +34,16 @@
               <th scope="col">Numero Orden</th>
               <th scope="col">Producto</th>
               <th scope="col">Monto</th>
-              <th scope="col">Fecha Pagado</th>
               <th scope="col">Fecha Preparado</th>
            </tr>
         </thead>
-        <tbody>
-         <tr *ngFor="let p of OrdenTabla">
+        <tbody *ngFor="let p of OrdenTabla">
+          <tr *ngIf="p.fechaPreparado !=null">
                <td>{{p.idOrden}}</td>
                <td>{{p.numeroOrden}}</td>
                <td>{{p.productoNombre}}</td>
                <td>{{p.monto}}</td>
-               <td>{{p.fechaPagado | date: 'yyyy-MM-dd'}}</td>
-               <td>{{p.fechaDespachado | date: 'yyyy-MM-dd'}}</td>
+               <td>{{p.fechaPreparado | date: 'yyyy-MM-dd'}}</td>
          </tr>
         </tbody>
      </table>
@@ -60,17 +56,15 @@
               <th scope="col">Numero Orden</th>
               <th scope="col">Producto</th>
               <th scope="col">Monto</th>
-              <th scope="col">Fecha Pagado</th>
-              <th scope="col">Fecha Preparado</th>
+              <th scope="col">Fecha Despachado</th>
            </tr>
         </thead>
-        <tbody>
-         <tr *ngFor="let p of OrdenTabla">
+        <tbody *ngFor="let p of OrdenTabla">
+          <tr *ngIf="p.fechaDespachado !=null">
                <td>{{p.idOrden}}</td>
                <td>{{p.numeroOrden}}</td>
                <td>{{p.productoNombre}}</td>
                <td>{{p.monto}}</td>
-               <td>{{p.fechaPagado | date: 'yyyy-MM-dd'}}</td>
                <td>{{p.fechaDespachado | date: 'yyyy-MM-dd'}}</td>
          </tr>
         </tbody>
@@ -84,18 +78,16 @@
               <th scope="col">Numero Orden</th>
               <th scope="col">Producto</th>
               <th scope="col">Monto</th>
-              <th scope="col">Fecha Pagado</th>
-              <th scope="col">Fecha Preparado</th>
+              <th scope="col">Fecha Entregado</th>
            </tr>
         </thead>
-        <tbody>
-         <tr *ngFor="let p of OrdenTabla">
+        <tbody *ngFor="let p of OrdenTabla">
+         <tr *ngIf="p.fechaEntregado !=null">
                <td>{{p.idOrden}}</td>
                <td>{{p.numeroOrden}}</td>
                <td>{{p.productoNombre}}</td>
                <td>{{p.monto}}</td>
-               <td>{{p.fechaPagado | date: 'yyyy-MM-dd'}}</td>
-               <td>{{p.fechaDespachado | date: 'yyyy-MM-dd'}}</td>
+               <td>{{p.fechaEntregado | date: 'yyyy-MM-dd'}}</td>
          </tr>
         </tbody>
      </table>
