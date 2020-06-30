@@ -17,6 +17,7 @@ import { MenuComponent } from './menu/menu.component';
 import { IndexComponent } from './index/index.component';
 import { EntregasComponent } from './entregas/entregas.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import { DetalleComponent } from './detalle/detalle.component';
 
 
 
@@ -27,7 +28,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     RegistroComponent,
     MenuComponent,
     IndexComponent,
-    EntregasComponent
+    EntregasComponent,
+    DetalleComponent
   ],
   imports: [
     BrowserModule,
