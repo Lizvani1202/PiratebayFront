@@ -4,6 +4,7 @@ export class Orden {
         productoNombre: string;
         productoTipo: string;
         monto: number;
+        cantidad: string;
         cliente: string;
         fechaPagado: Date;
         fechaPreparado: Date;

@@ -1,0 +1,46 @@
+<app-menu></app-menu>
+<div align="center">
+  <form class="form-horizontal">
+  <fieldset>
+  <div class="form-group">
+<strong>    <label class="col-md-4 control-label" for="textinput">id Orden</label></strong>
+    <div class="col-md-4">
+    {{Orden.idOrden}}
+    </div>
+  </div>
+  <div class="form-group">
+    <strong><label class="col-md-4 control-label" for="textinput">Orden Numero</label></strong>
+    <div class="col-md-4">
+      {{Orden.numeroOrden}}
+    </div>
+  </div>
+  <div class="form-group">
+    <strong> <label class="col-md-4 control-label" for="textinput">Titulo</label>
+    </strong>
+       <div class="col-md-4">
+      {{Orden.productoNombre}}
+    </div>
+  </div>
+  <div class="form-group">
+   <strong> <label class="col-md-4 control-label" for="Cliente">Cliente</label></strong>
+    <div class="col-md-4">
+      {{Orden.cliente}}
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <strong><label class="col-md-4 control-label" for="textinput">Categoria</label></strong>
+    <div class="col-md-4">
+      {{Orden.productoTipo}}
+    </div>
+  </div>
+  <div class="form-group">
+       <div class="col-md-4">
+      <button (click)="volver()" id="singlebutton" name="singlebutton" class="btn btn-primary">Volver</button>
+    </div>
+  </div>
+
+  </fieldset>
+  </form>
+
+</div>

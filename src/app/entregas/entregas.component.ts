@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Orden } from '../models/orden';
 import { OrdenServiceService } from '../service/orden-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-entregas',
@@ -9,13 +10,15 @@ import { OrdenServiceService } from '../service/orden-service.service';
 })
 export class EntregasComponent implements OnInit {
 
-  constructor(private Ordenservicio:OrdenServiceService) { }
+  constructor(private Ordenservicio:OrdenServiceService,private router:Router) { }
   OrdenTabla:Orden[];
+  aux:any;
   ngOnInit() {
     this.ObtenerDatos();
   }
-  ObtenerDatos(): any{
+  ObtenerDatos(){
     this.Ordenservicio.OrdenGet().subscribe(data=>this.OrdenTabla=data);
+    this.aux=this.OrdenTabla;
     this.Filtrar();
   }
   Filtrar(): void{
@@ -26,6 +29,12 @@ export class EntregasComponent implements OnInit {
 
     console.log();
 
+  }
+  detalle(id)
+  {
+    localStorage.setItem("id",id);
+    console.log(id);
+    this.router.navigate(['/detalle']);
   }
 
 }
