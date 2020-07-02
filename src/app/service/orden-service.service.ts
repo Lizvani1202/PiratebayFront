@@ -9,15 +9,16 @@ export class OrdenServiceService {
 
   URL = "http://localhost:8040/api/orden";
   URL2 = "http://localhost:8040/api/buscar";
+  URL3 = "http://localhost:8040/api/update";
 
   constructor(private http:HttpClient) { }
   OrdenGet(){
     return this.http.get<Orden[]>(this.URL);
   }
   OrdgenGetbyId(id){
-    return this.http.get<Orden[]>(this.URL2+"/"+id);
+    return this.http.get<Orden>(this.URL2+"/"+id);
   }
-  OrdenPost(){
-
+  OrdenPut(id){
+    return this.http.put(this.URL3,id);
   }
 }

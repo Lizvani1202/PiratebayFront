@@ -30,7 +30,8 @@
                <td>{{p.monto * p.cantidad}}</td>
                <td>{{p.cliente}}</td>
                <td>{{p.fechaPagado | date: 'yyyy-MM-dd'}}</td>
-               <td><button class="btn btn-primary" (click)="detalle(p.idOrden)">Detalle</button></td>
+               <td><button class="btn btn-primary" (click)="detalle(p.idOrden)">Detalle</button>
+                <button class="btn btn-success" (click)="editar(p.idOrden)">Actualizar</button></td>
          </tr>
         </tbody>
      </table> </mat-tab>
@@ -46,6 +47,7 @@
               <th scope="col">Total</th>
               <th scope="col">Cliente</th>
               <th scope="col">Fecha Preparado</th>
+              <th scope="col">Opciones</th>
            </tr>
         </thead>
         <tbody *ngFor="let p of OrdenTabla">
@@ -58,7 +60,8 @@
                <td>{{p.monto * p.cantidad}}</td>
                <td>{{p.cliente}}</td>
                <td>{{p.fechaPreparado | date: 'yyyy-MM-dd'}}</td>
-               <td><button class="btn btn-primary" (click)="detalle(p.idOrden)">Detalle</button></td>
+               <td><button class="btn btn-primary" (click)="detalle(p.idOrden)">Detalle</button>
+                <button class="btn btn-success" (click)="editar(p.idOrden)">Actualizar</button></td>
          </tr>
         </tbody>
      </table>
@@ -75,6 +78,7 @@
               <th scope="col">Total</th>
               <th scope="col">Cliente</th>
               <th scope="col">Fecha Despachado</th>
+              <th scope="col">Opciones</th>
            </tr>
         </thead>
         <tbody *ngFor="let p of OrdenTabla">
@@ -87,7 +91,9 @@
                <td>{{p.monto * p.cantidad}}</td>
                <td>{{p.cliente}}</td>
                <td>{{p.fechaDespachado | date: 'yyyy-MM-dd'}}</td>
-               <td><button class="btn btn-primary" (click)="detalle(p.idOrden)">Detalle</button></td>
+               <td><button class="btn btn-primary" (click)="detalle(p.idOrden)">Detalle</button>
+               <button class="btn btn-success" (click)="editar(p.idOrden)">Actualizar</button></td>
+
          </tr>
         </tbody>
      </table>
@@ -104,6 +110,7 @@
               <th scope="col">Total</th>
               <th scope="col">Cliente</th>
               <th scope="col">Fecha Entregado</th>
+              <th scope="col">Opciones</th>
            </tr>
         </thead>
         <tbody *ngFor="let p of OrdenTabla">
@@ -116,7 +123,8 @@
                <td>{{p.monto * p.cantidad}}</td>
                <td>{{p.cliente}}</td>
                <td>{{p.fechaEntregado | date: 'yyyy-MM-dd'}}</td>
-               <td><button class="btn btn-primary" (click)="detalle(p.idOrden)">Detalle</button></td>
+               <td><button class="btn btn-primary" (click)="detalle(p.idOrden)">Detalle</button>
+                <button class="btn btn-success" (click)="editar(p.idOrden)">Actualizar</button></td>
          </tr>
         </tbody>
      </table>

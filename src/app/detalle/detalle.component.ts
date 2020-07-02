@@ -16,7 +16,7 @@ export class DetalleComponent implements OnInit {
   ngOnInit() {
     this.ObtenerDatos();
   }
-  Orden:Orden[];
+  Orden:Orden;
   ObtenerDatos(){
     this.Ordenservice.OrdgenGetbyId(localStorage.getItem("id")).subscribe(data=>{
      this.Orden=data;

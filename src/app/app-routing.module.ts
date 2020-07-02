@@ -6,6 +6,7 @@ import { LoginComponent } from './auth/login.component';
 import { RegistroComponent } from './auth/registro.component';
 import { ProdGuardService as guard } from './guards/prod-guard.service';
 import { DetalleComponent } from './detalle/detalle.component';
+import { EditarComponent } from './editar/editar.component';
 
 
 
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'registro', component: RegistroComponent },
   { path: 'detalle', component: DetalleComponent},
+  { path: 'actualizar', component: EditarComponent},
   { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 

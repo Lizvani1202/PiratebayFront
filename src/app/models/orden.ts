@@ -11,4 +11,5 @@ export class Orden {
         fechaDespachado: Date;
         fechaEntregado: Date;
         tx_date: Date;
+        estado:number;
 }

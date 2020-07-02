@@ -36,5 +36,11 @@ export class EntregasComponent implements OnInit {
     console.log(id);
     this.router.navigate(['/detalle']);
   }
+  editar(id)
+  {
+    localStorage.setItem("id",id);
+    console.log(id);
+    this.router.navigate(['/actualizar']);
+  }
 
 }

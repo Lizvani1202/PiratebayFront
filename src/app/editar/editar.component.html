@@ -1,0 +1,45 @@
+<app-menu></app-menu>
+<div align="center">
+  <form class="form-horizontal">
+  <fieldset>
+    <h1>Actualizar Estado</h1>
+    <ng-container *ngIf="Orden.estado==0; else elseTemplate1">
+      <div class="form-group">
+        <button type="button" class="btn btn-primary" (click)="Preparado(Orden.id)">Preparado</button>
+        <button type="button" class="btn btn-secondary"disabled>Despachado</button>
+        <button type="button" class="btn btn-success"disabled>Entregado</button>
+        </div>
+    </ng-container>
+    <ng-template #elseTemplate1>
+      <ng-container *ngIf="Orden.estado==1; else elseTemplate2">
+        <div class="form-group">
+          <button type="button" class="btn btn-primary" disabled>Preparado</button>
+          <button type="button" class="btn btn-secondary" (click)="Despachado(Orden.id)">Despachado</button>
+          <button type="button" class="btn btn-success"disabled>Entregado</button>
+          </div>
+      </ng-container>
+      <ng-template #elseTemplate2>
+        <ng-container *ngIf="Orden.estado==2; else elseTemplate3">
+          <div class="form-group">
+            <button type="button" class="btn btn-primary" disabled>Preparado</button>
+            <button type="button" class="btn btn-secondary" disabled>Despachado</button>
+            <button type="button" class="btn btn-success" (click)="Entregado(Orden.id)">Entregado</button>
+            </div>
+        </ng-container>
+        <ng-template #elseTemplate3>
+         <h1>Lo sentimos no podemos hacer mas cambios</h1>
+        </ng-template>
+      </ng-template>
+    </ng-template>
+
+
+  <div class="form-group">
+       <div class="col-md-4">
+      <button (click)="volver()" id="singlebutton" name="singlebutton" class="btn btn-primary">Volver</button>
+    </div>
+  </div>
+
+  </fieldset>
+  </form>
+
+</div>

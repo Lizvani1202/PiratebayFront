@@ -18,6 +18,7 @@ import { IndexComponent } from './index/index.component';
 import { EntregasComponent } from './entregas/entregas.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { DetalleComponent } from './detalle/detalle.component';
+import { EditarComponent } from './editar/editar.component';
 
 
 
@@ -29,7 +30,8 @@ import { DetalleComponent } from './detalle/detalle.component';
     MenuComponent,
     IndexComponent,
     EntregasComponent,
-    DetalleComponent
+    DetalleComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,
